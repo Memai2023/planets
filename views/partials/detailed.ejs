@@ -1,0 +1,18 @@
+<div class="planets">
+    <% if (locals.travel !== undefined && locals.travel !== null) { %>
+            <div class="main-content <%= locals.travel.name %>">
+                <h2><%= locals.travel.name %></h2>
+                <p><img class="large" src="/<%= locals.travel.image %>" alt="<%= locals.travel.name %>"></p>
+                <p><span>Destination:</span> <%= locals.travel.destination %></p>
+                <p><span>Description:</span> <%= locals.travel.description %></p>
+                <hr>
+                <p><span>Activity:</span> <%= locals.travel.activity %></p>
+                <p><span>Stay:</span> <%= locals.travel.stay %></p>
+                <p><span>Weather:</span> <%= locals.travel.weather %></p>
+                <p><span>Duration:</span> <%= locals.travel.duration %></p>
+                <p class="price"><span>Price:</span> <%= locals.travel.price %></p>
+            </div>
+    <% } else { %>
+        <p>No planets for you!</p>
+    <% } %>
+</div>

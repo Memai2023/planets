@@ -1,0 +1,23 @@
+<div class="planets">
+    <% if (locals.travel !== undefined && locals.travel !== null && locals.travel.length > 0) { %>
+        <div class="welcome">
+            <h1><%= locals.planet %></h1>
+            <p><%=welcome%></p>
+        </div>
+        <% locals.travel.forEach(trip => { %>
+        <a href="<%= trip.destination %>">
+            <div class="planet-container">
+                <div class="image-container">
+                    <img class="small" src="/<%= trip.image %>" alt="<%= trip.name %>">
+                </div>
+                <div class="content-container">
+                    <h2><%= trip.destination %></h2>
+                    <p><%= trip.brief %></p>
+                </div>
+            </div>
+        </a>
+    <% }); %>
+    <% } else { %>
+        <p>No planets for you!</p>
+    <% } %>
+</div>
